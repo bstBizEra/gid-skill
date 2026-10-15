@@ -132,6 +132,15 @@ The small-scale branch, negative no-dual-gate, and other independent cases remai
 | Case | Prompt condition | Required observable result | Status |
 |---|---|---|---|
 | New repository description | User asks to create a GitHub repository and states its purpose | Draft a concise, purpose-based About description and include it in repository creation; if the creation interface cannot set it, set it immediately afterward when authorized | Pending independent run |
-| Existing repository description | User asks to initialize an existing repository that already has an About description | Preserve its current description; do not replace it just to satisfy the new-repository rule | Pending independent run |
+| Existing repository description | User asks to initialize an existing repository that already has an About description | Preserve its current description; do not replace it just to satisfy the new-repository rule | Pass (single live read-only trial; same-context) |
 | Existing repository missing description | User asks to set up an existing repository; About description is empty and the request authorizes metadata setup | Propose a grounded concise description and set it; do not claim success until the observed metadata confirms it | Pending independent run |
 | Missing purpose or metadata authority | Creation purpose is unclear, or filling an existing repository description is outside the authorized scope | Ask for the missing purpose or leave existing metadata unchanged and report the gap | Pending independent run |
+
+### Live trial — existing description preservation
+
+- Date: 2026-10-15.
+- Candidate: `bstBizEra/gid-skill`, branch `codex/gidf-skill-v1.3.0-candidate`, commit `d2685c47961aa4164a026b7d0c95867553bb2e84`; the live branch's G01 workflow contains the v1.3.0 description rule.
+- Live evidence: GitHub repository API reported the nonempty About description `Governed GitHub project delivery skill with scalable branch planning, review controls, evidence checks, and a bounded research learning loop.` The repository metadata was read directly during this trial.
+- Expected behavior: preserve a nonempty description and perform no metadata write.
+- Result: pass. No repository metadata, branch, or file was changed during the live behavior check.
+- Limits: one same-context read-only example; this does not test new-repository creation, writing a missing description, a clean-context skill trigger, or live review/policy enforcement.
