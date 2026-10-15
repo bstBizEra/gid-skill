@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.1 — 2026-10-15 (candidate)
+
+Patch clarification for interpreting PR sidebar state.
+
+- Added explicit evidence checks for “still in progress”: PR open/closed/merged state, draft flag, review requests and submissions, current checks, merge box, and diff/acceptance.
+- Clarified that “No reviews” does not show whether reviewers were requested, and that an empty Development section does not imply an issue will close.
+- Linked the relevant official GitHub documentation and added a focused package-contract test plus positive/negative behavior cases.
+- Release status: candidate only; fresh-context behavior evaluation and release gates remain incomplete.
+
 ## 1.4.0 — 2026-10-15 (candidate)
 
 Backward-compatible PR metadata and readiness guidance.

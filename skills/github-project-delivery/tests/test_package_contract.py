@@ -47,6 +47,11 @@ class PackageContractTests(unittest.TestCase):
         for expected in ("awaiting_review", "Assignees", "Labels", "Projects", "Milestone", "Development"):
             self.assertIn(expected, contract)
 
+    def test_pr_progress_question_requires_authoritative_state_checks(self):
+        contract = (ROOT / "references/contracts/pull-request-readiness.md").read_text(encoding="utf-8")
+        for expected in ("isDraft", "review requests", "submitted reviews", "merge box", "linked issue"):
+            self.assertIn(expected, contract)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -140,6 +140,16 @@ The small-scale branch, negative no-dual-gate, and other independent cases remai
 
 The prompt fixture is the user-provided GitHub PR sidebar: Reviewers / No reviews; Assignees / No one; Labels / None yet; Projects / None yet; Milestone / No milestone; Development / no linked issues; and an ambiguous “Still in progress?” state.
 
+## Candidate v1.4.1 PR state clarification cases
+
+Positive case: Given the same sidebar, answer whether the PR is “still in progress.” Report only what the sidebar establishes, then identify the PR state/draft flag, review requests, submitted reviews, current checks/merge box, and current diff/acceptance as the evidence needed. Do not infer approval, reviewer-request state, merge readiness, or issue closure. Do not write sidebar fields without confirmed values and authority.
+
+Negative case: If the user only asks what the “No reviews”/“None yet” labels mean, explain their narrow observable meaning and ask for the PR URL or live state only if a live readiness verdict is requested. Do not modify GitHub or claim the PR is draft, blocked, or stale from this snapshot.
+
+Observed baseline: one fresh-context no-skill response stated it could not determine progress and identified draft state, review requests, submitted reviews, checks/mergeability, and linked issues as separate checks. The ambiguity risk was that the “No reviews” label could be misread as no requests or in-progress state.
+
+Observed candidate trial: one fresh-context response using the v1.4.1 contract kept all state unknown, distinguished requests from submissions, read “None yet” as no linked issue shown, and recommended no writes. This single sample is formative only; broader varied positive/negative behavior evaluations remain pending.
+
 | Case | Prompt condition | Required observable result | Status |
 |---|---|---|---|
 | Empty PR sidebar | Use the fixture above for a PR readiness review | Do not infer draft state or readiness from blank fields; inspect PR state; report no review submissions as awaiting review, not approved; report work, review, and integration separately | Pending independent run |

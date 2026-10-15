@@ -1,6 +1,6 @@
 {
   "name": "github-project-delivery",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "entry": "SKILL.md",
   "router": "references/router.md",
   "contracts": ["references/contracts/authority-and-scope.md", "references/contracts/evidence-and-attempts.md", "references/contracts/review-and-acceptance.md", "references/contracts/pull-request-readiness.md", "references/contracts/status-fields.md", "references/research-learning-loop.md", "references/skill-versioning-and-release.md"],
