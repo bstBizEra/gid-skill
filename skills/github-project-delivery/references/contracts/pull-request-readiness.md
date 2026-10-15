@@ -14,7 +14,7 @@ When asked whether a PR is “still in progress,” inspect its authoritative PR
 
 Check each field against repository conventions and the task's scope:
 
-- **Reviewers:** identify required reviewers from confirmed policy, CODEOWNERS, or explicit direction. Request them only when authorized. “No reviews” means no submitted review is shown; inspect review requests separately. Do not treat it as approval or as proof that no reviewer was requested.
+- **Reviewers:** identify required reviewers from confirmed policy, CODEOWNERS, or explicit direction. Request them only when authorized. Treat “No reviews” as literal sidebar wording; by itself, it establishes neither the review-request state nor the submitted-review state. Inspect review requests and submitted review decisions separately. Do not treat the wording as approval or as proof that nobody was asked to review.
 - **Assignees:** use a confirmed accountable owner or explicit assignment. Do not assign the author or another person by default.
 - **Labels:** apply only existing, relevant labels supported by repository conventions or explicit direction. Do not invent labels.
 - **Projects:** link only the confirmed project and item when tracking is in scope and authorized.
@@ -28,5 +28,5 @@ Return the observed draft/work state, review-request state, submitted-review sta
 ## GitHub documentation
 
 - [Pull requests](https://docs.github.com/en/pull-requests/reference/pull-requests) (draft and ready-for-review states; merge status)
-- [Pull request reviews](https://docs.github.com/en/pull-requests/reference/pull-request-reviews) and [requesting a review](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/requesting-a-pull-request-review) (review submissions and requests)
+- [Pull request reviews](https://docs.github.com/en/pull-requests/reference/pull-request-reviews), [requesting a review](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/requesting-a-pull-request-review), and [review-request API](https://docs.github.com/en/rest/pulls/review-requests) (review submissions and requests are distinct records)
 - [Linking a pull request to an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue) (issue linkage and closing behavior)

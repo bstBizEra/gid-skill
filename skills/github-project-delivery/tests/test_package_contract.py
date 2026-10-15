@@ -49,8 +49,10 @@ class PackageContractTests(unittest.TestCase):
 
     def test_pr_progress_question_requires_authoritative_state_checks(self):
         contract = (ROOT / "references/contracts/pull-request-readiness.md").read_text(encoding="utf-8")
-        for expected in ("isDraft", "review requests", "submitted reviews", "merge box", "linked issue"):
+        for expected in ("isDraft", "review requests", "submitted review decisions", "merge box", "linked issue"):
             self.assertIn(expected, contract)
+        self.assertIn("literal sidebar wording", contract)
+        self.assertNotIn("“No reviews” means no submitted review is shown", contract)
 
 
 if __name__ == "__main__":
