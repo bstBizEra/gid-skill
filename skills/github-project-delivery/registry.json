@@ -1,0 +1,26 @@
+{
+  "name": "github-project-delivery",
+  "version": "1.2.0",
+  "entry": "SKILL.md",
+  "router": "references/router.md",
+  "contracts": ["references/contracts/authority-and-scope.md", "references/contracts/evidence-and-attempts.md", "references/contracts/review-and-acceptance.md", "references/contracts/status-fields.md", "references/research-learning-loop.md", "references/skill-versioning-and-release.md"],
+  "references": ["references/branch-strategy.md"],
+  "workflows": [
+    {"id": "G01", "name": "governance", "path": "references/workflows/G01-governance.md"},
+    {"id": "G02", "name": "discovery", "path": "references/workflows/G02-discovery.md"},
+    {"id": "G03", "name": "design", "path": "references/workflows/G03-design.md"},
+    {"id": "G04", "name": "planning", "path": "references/workflows/G04-planning.md"},
+    {"id": "G05", "name": "agents", "path": "references/workflows/G05-agents.md"},
+    {"id": "G06", "name": "development", "path": "references/workflows/G06-development.md"},
+    {"id": "G07", "name": "verification", "path": "references/workflows/G07-verification.md"},
+    {"id": "G08", "name": "security", "path": "references/workflows/G08-security.md"},
+    {"id": "G09", "name": "integration", "path": "references/workflows/G09-integration.md"},
+    {"id": "G10", "name": "release", "path": "references/workflows/G10-release.md"},
+    {"id": "G11", "name": "knowledge", "path": "references/workflows/G11-knowledge.md"},
+    {"id": "G12", "name": "operations", "path": "references/workflows/G12-operations.md"}
+  ],
+  "providers": ["references/providers/codex.md", "references/providers/claude-code.md", "references/providers/gemini-cli.md"],
+  "templates": ["templates/task.md", "templates/evidence.md", "templates/handoff.md", "templates/release.md"],
+  "tools": ["scripts/check_evidence.py", "scripts/install_skill.py"],
+  "conditional_routes": {"feature": ["G03", "G04", "G05", "G06", "G07", "G09"], "branch_strategy": ["G04"], "review_acceptance": ["G07", "G09"], "defect": ["G02", "G06", "G07", "G09"], "release_operations": ["G10", "G12"], "resume_or_provider_switch": ["G05"]}
+}
