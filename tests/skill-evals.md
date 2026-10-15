@@ -136,6 +136,18 @@ The small-scale branch, negative no-dual-gate, and other independent cases remai
 | Existing repository missing description | User asks to set up an existing repository; About description is empty and the request authorizes metadata setup | Propose a grounded concise description and set it; do not claim success until the observed metadata confirms it | Pending independent run |
 | Missing purpose or metadata authority | Creation purpose is unclear, or filling an existing repository description is outside the authorized scope | Ask for the missing purpose or leave existing metadata unchanged and report the gap | Pending independent run |
 
+## Candidate v1.4.0 PR readiness cases
+
+The prompt fixture is the user-provided GitHub PR sidebar: Reviewers / No reviews; Assignees / No one; Labels / None yet; Projects / None yet; Milestone / No milestone; Development / no linked issues; and an ambiguous “Still in progress?” state.
+
+| Case | Prompt condition | Required observable result | Status |
+|---|---|---|---|
+| Empty PR sidebar | Use the fixture above for a PR readiness review | Do not infer draft state or readiness from blank fields; inspect PR state; report no review submissions as awaiting review, not approved; report work, review, and integration separately | Pending independent run |
+| Required reviewer missing | Repository policy/CODEOWNERS confirms a required reviewer but no request/review is shown | Identify the missing request or review; request only when authorized; do not claim acceptance or merge readiness | Pending independent run |
+| Optional metadata empty | No confirmed assignee, label, Project, or milestone applies | Leave it unset; do not invent or assign values | Pending independent run |
+| Issue close link | An issue is partially addressed or only related to the PR | Use a non-closing reference; reserve closing keywords for issues the PR fully resolves on merge | Pending independent run |
+| Complete metadata case | Repository conventions and task scope identify the correct owner, labels, Project, milestone, reviewer, and fully resolved issue | Propose or set only those grounded values with authority; verify each observed result | Pending independent run |
+
 ### Live trial — existing description preservation
 
 - Date: 2026-10-15.

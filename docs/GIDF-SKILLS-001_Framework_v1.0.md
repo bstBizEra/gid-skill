@@ -22,7 +22,7 @@ The developed package contains an actual SKILL.md router, twelve workflow module
 | G06 — Development | Code, branches, commits, PRs, Codespaces | Baseline → reproduce/specify → build slice → verify → record | Scoped candidate and behavior proof |
 | G07 — Verification | Actions, check runs, jobs, artifacts | Derive checks → reserve counted attempt → execute → classify → revalidate | Current-candidate evidence and preserved attempt ledger |
 | G08 — Security | Code scanning, secrets, dependencies, advisories | Map risk → inspect coverage → triage → remediate → verify | Finding/control register and risk disposition |
-| G09 — Integration | PR reviews/comments, checks, ownership, merge queue | Inspect exact candidate → disposition findings → obtain policy-required role approvals → refresh gates → integrate under authority | Review dispositions and actual integration outcome |
+| G09 — Integration | PR reviews/comments, reviewer requests, sidebar metadata, checks, ownership, merge queue | Inspect exact candidate → distinguish work/review/integration → verify metadata and findings → obtain policy-required approvals → refresh gates → integrate under authority | PR readiness, review dispositions, and actual integration outcome |
 | G10 — Release | Releases/tags, Packages, Pages, deployments | Pin artifact → prepare recovery → validate staging → publish/deploy → check health | Release/runtime evidence and recovery record |
 | G11 — Knowledge | Docs, Discussions, Wiki, Pages | Establish canonical source → document decisions → synchronize → learn | Current docs, decisions and onboarding |
 | G12 — Operations | Insights, charts, incidents, telemetry | Define indicators → measure → mitigate/repair → feed backlog | Performance report, incident record and improvement tasks |
@@ -173,7 +173,7 @@ verification, integration, runtime and business acceptance separately.
 
 ## Validation and remaining proof
 
-The v1.3.0 candidate passes **24 automated Python tests**, including CLI exit handling, malformed snapshots, stale head/base evidence, stale/dismissed reviews, duplicate and missing role approvals, missing checks, incomplete acceptance, blocked dependencies, attempt reservations/interruptions/caps, dry-run behavior, installer publish races, registry paths, package-local Markdown links, and repository-setup route coverage. These are package checks, not a skill release gate. One independent read-only synthetic fixture run exercised v1.2.0 scaled branch planning and review acceptance; the new repository-description behavior cases and other authored behavior cases remain pending. Native host discovery, live policy enforcement, and target-repository adoption are unverified.
+The v1.4.0 candidate passes **25 automated Python tests**, including CLI exit handling, malformed snapshots, stale head/base evidence, stale/dismissed reviews, duplicate and missing role approvals, missing checks, incomplete acceptance, blocked dependencies, attempt reservations/interruptions/caps, dry-run behavior, installer publish races, registry paths, Markdown links, repository-setup route coverage, and PR readiness contract coverage. These are package checks, not a skill release gate. One independent synthetic fixture run exercised v1.2.0 branch planning and review acceptance; one live read-only trial checked v1.3.0 preservation of an existing repository description. The v1.4.0 PR metadata behavior cases remain pending. Native host discovery, live policy enforcement, and target-repository adoption are unverified.
 
 Fresh-agent applications covered a deadline-pressured release handoff and a mixed repository adoption inventory. The initial handoff was accurate but unnecessarily long; its output contract was revised and retested. A no-skill control already respected major safety and authority boundaries, so these applications do not establish a measured performance improvement over baseline.
 
@@ -192,8 +192,8 @@ Native Codex, Claude Code and Gemini CLI executables are unavailable in this env
 - [Actions secure use](https://docs.github.com/en/actions/reference/security/secure-use)
 - [SWE-PolyBench research paper](https://arxiv.org/abs/2504.08703)
 
-Feature/format facts come from primary documentation; group boundaries, templates, controls and roadmap are framework design recommendations. Candidate contents, evaluation limits and checksum are recorded in `dist/CANDIDATE-v1.3.0.md`.
+Feature/format facts come from primary documentation; group boundaries, templates, controls and roadmap are framework design recommendations. Candidate contents, evaluation limits and checksum are recorded in `dist/CANDIDATE-v1.4.0.md`.
 
 ## Source version and recovery
 
-The current source workspace has no Git history. The portable v1.3.0 candidate archive and SHA-256 are recorded in `dist/CANDIDATE-v1.3.0.md`; prior v1.1.0, v1.1.1, and v1.2.0 candidate artifacts are retained in `dist/`. The release gate remains incomplete, and no hosted release or target-repository adoption is claimed. The installed runtime copy remains a separate artifact and must be updated through its authorized installation workflow.
+The current source workspace has no Git history. The portable v1.4.0 candidate archive and SHA-256 are recorded in `dist/CANDIDATE-v1.4.0.md`; prior v1.1.0, v1.1.1, v1.2.0, and v1.3.0 artifacts are retained in `dist/`. The release gate remains incomplete, and no hosted release or target-repository adoption is claimed. The installed runtime copy remains a separate artifact and must be updated through its authorized installation workflow.
