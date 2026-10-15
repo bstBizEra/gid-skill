@@ -14,7 +14,7 @@ The developed package contains an actual SKILL.md router, twelve workflow module
 
 | Group | Scope and GitHub features | Skill workflow | Reviewable output |
 |---|---|---|---|
-| G01 — Governance | Settings, rulesets, roles, CODEOWNERS, Environments | Resolve authority → inspect controls → map actions → prepare/apply authorized delta | Authority matrix and confirmed/proposed configuration |
+| G01 — Governance | Repository About metadata, settings, rulesets, roles, CODEOWNERS, Environments | Resolve authority → inspect controls → include a purpose-based description when creating a repository → prepare/apply authorized metadata delta | Authority matrix, repository description, and confirmed/proposed configuration |
 | G02 — Discovery | Code, Issues, PRs, Projects, Actions, docs | Inventory → pin evidence → reconcile → identify gaps → phase work | Reconciliation matrix and roadmap |
 | G03 — Design | Discussions, specs/ADRs, design PRs | Problem/outcome → research → journeys/contracts → acceptance → decision | PRD, functional/UX specification, architecture and acceptance matrix |
 | G04 — Planning | Issues/forms/types, sub-issues, dependencies, milestones, Projects, branch topology | Reuse tasks → decompose/link → choose scale-appropriate branches → map fields/views → ready queue | Deduplicated backlog, branch plan, and executable task packets |
@@ -173,7 +173,7 @@ verification, integration, runtime and business acceptance separately.
 
 ## Validation and remaining proof
 
-The v1.2.0 candidate passes **23 automated Python tests**, including CLI exit handling, malformed snapshots, stale head/base evidence, stale/dismissed reviews, duplicate and missing role approvals, missing checks, incomplete acceptance, blocked dependencies, attempt reservations/interruptions/caps, dry-run behavior, installer publish races, registry paths, and package-local Markdown links. These are package checks, not a skill release gate. One independent read-only synthetic fixture run exercised scaled branch planning and review acceptance; several authored behavior cases remain pending. Native host discovery, live policy enforcement, and target-repository adoption are unverified.
+The v1.3.0 candidate passes **24 automated Python tests**, including CLI exit handling, malformed snapshots, stale head/base evidence, stale/dismissed reviews, duplicate and missing role approvals, missing checks, incomplete acceptance, blocked dependencies, attempt reservations/interruptions/caps, dry-run behavior, installer publish races, registry paths, package-local Markdown links, and repository-setup route coverage. These are package checks, not a skill release gate. One independent read-only synthetic fixture run exercised v1.2.0 scaled branch planning and review acceptance; the new repository-description behavior cases and other authored behavior cases remain pending. Native host discovery, live policy enforcement, and target-repository adoption are unverified.
 
 Fresh-agent applications covered a deadline-pressured release handoff and a mixed repository adoption inventory. The initial handoff was accurate but unnecessarily long; its output contract was revised and retested. A no-skill control already respected major safety and authority boundaries, so these applications do not establish a measured performance improvement over baseline.
 
@@ -192,8 +192,8 @@ Native Codex, Claude Code and Gemini CLI executables are unavailable in this env
 - [Actions secure use](https://docs.github.com/en/actions/reference/security/secure-use)
 - [SWE-PolyBench research paper](https://arxiv.org/abs/2504.08703)
 
-Feature/format facts come from primary documentation; group boundaries, templates, controls and roadmap are framework design recommendations. Candidate contents, evaluation limits and checksum are recorded in `dist/CANDIDATE-v1.2.0.md`.
+Feature/format facts come from primary documentation; group boundaries, templates, controls and roadmap are framework design recommendations. Candidate contents, evaluation limits and checksum are recorded in `dist/CANDIDATE-v1.3.0.md`.
 
 ## Source version and recovery
 
-The current workspace is a local folder without Git history. The portable v1.2.0 candidate archive and SHA-256 are recorded in `dist/CANDIDATE-v1.2.0.md`; the previous v1.1.0 and v1.1.1 archives are retained in `dist/`. The release gate remains incomplete, and no hosted repository release or target-repository adoption is claimed. The installed runtime copy remains a separate artifact and must be updated through its authorized installation workflow.
+The current source workspace has no Git history. The portable v1.3.0 candidate archive and SHA-256 are recorded in `dist/CANDIDATE-v1.3.0.md`; prior v1.1.0, v1.1.1, and v1.2.0 candidate artifacts are retained in `dist/`. The release gate remains incomplete, and no hosted release or target-repository adoption is claimed. The installed runtime copy remains a separate artifact and must be updated through its authorized installation workflow.

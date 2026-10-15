@@ -1,6 +1,6 @@
 ---
 name: github-project-delivery
-description: Use when planning, implementing, verifying, integrating, releasing, or operating work tracked in GitHub and the project needs authority-aware workflow routing and current evidence.
+description: Use when creating, planning, implementing, verifying, integrating, releasing, or operating GitHub projects and repository work needs authority-aware workflow routing and current evidence.
 ---
 
 # GitHub Project Delivery

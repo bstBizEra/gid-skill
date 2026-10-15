@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.0 — 2026-10-15 (candidate)
+
+Backward-compatible repository-setup guidance.
+
+- For every GitHub repository creation, derive a concise About description from the requested purpose and include it during creation; if the available creation path cannot set it, set it afterward when authorized.
+- For existing repositories, preserve nonempty descriptions and add a description only when it is missing and the requested, authorized setup scope permits the metadata write.
+- Added a repository-creation route and positive/negative behavior evaluation cases.
+- Release status: candidate only; fresh-context evaluation and release gates remain incomplete.
+
 ## 1.2.0 — 2026-10-15
 
 Backward-compatible branch planning and review-acceptance controls, plus installer race safety.

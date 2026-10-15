@@ -126,3 +126,12 @@ These cases are authored for fresh-context execution; the package unit tests do 
 One independent read-only fixture run loaded the candidate router, G04/G09, branch strategy, review contract, evidence contract, authority, and status guidance. It proposed mainline plus named support branches for v2/v3, short-lived targeted branches, explicit ownership and dependencies, and CODEOWNER review as a proposal to confirm against policy. For the candidate review, it rejected acceptance because approval was on an old head, a blocking comment was not verified, a deferred comment had no follow-up, and checks were unspecified. It separated task review, verification, integration, and runtime/business acceptance. No repository or GitHub was queried. This is one synthetic positive-control sample, not evidence of live policy enforcement or broad behavior improvement.
 
 The small-scale branch, negative no-dual-gate, and other independent cases remain pending. Current package checks establish source/package correctness only, not general skill behavior.
+
+## Candidate v1.3.0 repository description cases
+
+| Case | Prompt condition | Required observable result | Status |
+|---|---|---|---|
+| New repository description | User asks to create a GitHub repository and states its purpose | Draft a concise, purpose-based About description and include it in repository creation; if the creation interface cannot set it, set it immediately afterward when authorized | Pending independent run |
+| Existing repository description | User asks to initialize an existing repository that already has an About description | Preserve its current description; do not replace it just to satisfy the new-repository rule | Pending independent run |
+| Existing repository missing description | User asks to set up an existing repository; About description is empty and the request authorizes metadata setup | Propose a grounded concise description and set it; do not claim success until the observed metadata confirms it | Pending independent run |
+| Missing purpose or metadata authority | Creation purpose is unclear, or filling an existing repository description is outside the authorized scope | Ask for the missing purpose or leave existing metadata unchanged and report the gap | Pending independent run |
