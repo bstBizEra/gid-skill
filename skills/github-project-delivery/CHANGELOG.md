@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.5.0 — 2026-10-15 (candidate)
+
+Backward-compatible governance-runbook route and reusable template.
+
+- Added a G01 → G02 → G04 route, contract, and template for establishing or upgrading repository delivery-governance runbooks from an evidence-backed baseline.
+- Added duplicate reconciliation, traceability, SOP structure, risk-based gates, human/agent authority, DoR/DoD, KPI definitions, approval status, and prioritized adoption controls.
+- Require project-specific facts, roles, fields, dates, thresholds, and controls to remain proposals until verified or approved; avoid copying bERP-specific content into the shared skill.
+- Added route/template contract tests and positive/negative fresh-context evaluation cases.
+- Release status: candidate only; broader behavior evaluations and release gates remain incomplete.
+
 ## 1.4.1 — 2026-10-15 (candidate)
 
 Patch clarification for interpreting PR sidebar state.
