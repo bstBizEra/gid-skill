@@ -54,6 +54,25 @@ class PackageContractTests(unittest.TestCase):
         self.assertIn("literal sidebar wording", contract)
         self.assertNotIn("“No reviews” means no submitted review is shown", contract)
 
+    def test_project_governance_runbook_route_is_reusable_and_registered(self):
+        registry = json.loads((ROOT / "registry.json").read_text(encoding="utf-8"))
+        contract_path = "references/contracts/project-governance-runbook.md"
+        template_path = "templates/project-governance-runbook.md"
+        self.assertIn(contract_path, registry["contracts"])
+        self.assertIn(template_path, registry["templates"])
+        self.assertEqual(registry["conditional_routes"]["project_governance_runbook"], ["G01", "G02", "G04"])
+        contract = (ROOT / contract_path).read_text(encoding="utf-8")
+        for expected in ("inventory", "Identify duplicates and gaps", "proposed", "approved", "risk-based",
+                         "Definition of Ready", "Definition of Done", "KPI", "authority"):
+            self.assertIn(expected, contract)
+        self.assertNotIn("bERP", contract)
+        self.assertNotIn("ERPNext", contract)
+        template = (ROOT / template_path).read_text(encoding="utf-8")
+        self.assertIn("Evidence inspected", template)
+        self.assertIn("Target and approval status", template)
+        self.assertNotIn("bERP", template)
+        self.assertNotIn("ERPNext", template)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,15 +1,15 @@
 # GIDF-SKILLS-001 — GitHub Project Delivery Skill Framework
 
 - **Framework version:** 1.0.0
-- **Skill package version:** 1.4.1 candidate
+- **Skill package version:** 1.5.0 candidate
 - **Status:** Release gates incomplete; host adoption not verified
 - **Source document:** [docs/GIDF-SKILLS-001_Framework_v1.0.md](docs/GIDF-SKILLS-001_Framework_v1.0.md)
 
 GIDF-SKILLS-001 describes a provider-neutral skill for guiding AI agents through GitHub project delivery. It routes a request to the smallest relevant workflow, uses repository policy as the authority for actions, and keeps verification, integration, runtime status, and business acceptance distinct.
 
-The portable skill candidate v1.4.1 is under [`skills/github-project-delivery`](skills/github-project-delivery/SKILL.md). It includes scalable branch planning, review-comment disposition, optional distinct auditor/reviewer checks in evidence snapshots, a rule to add a purpose-based About description whenever a GitHub repository is created, and a PR readiness checklist that distinguishes draft/work state, requested reviewers, submitted reviews, merge readiness, and issue-closing links. Its evidence checker remains advisory and cannot enforce GitHub policy. The installer stages and verifies a copy and preserves a destination that appears during a race. All 26 package tests pass; broader fresh-context evaluation is incomplete, so this is not a release. The installed copy and target-repository adoption have not been updated.
+The portable skill candidate v1.5.0 is under [`skills/github-project-delivery`](skills/github-project-delivery/SKILL.md). It includes scalable branch planning, review-comment disposition, advisory evidence checks, safe installation, PR readiness guidance, and a reusable project-governance runbook route and template. The runbook workflow inventories and reconciles existing work before proposals, links scope to evidence and approvals, and keeps project-specific facts and targets out of the shared skill. All 27 package tests pass; broader fresh-context evaluation is incomplete, so this is not a release. The installed copy and target-repository adoption have not been updated.
 
-Download the [v1.4.1 candidate package](dist/github-project-delivery-v1.4.1-candidate.zip) and review its [candidate record](dist/CANDIDATE-v1.4.1.md) for the SHA-256, validation status, and outstanding release gates.
+Download the [v1.5.0 candidate package](dist/github-project-delivery-v1.5.0-candidate.zip) and review its [candidate record](dist/CANDIDATE-v1.5.0.md) for the SHA-256, validation status, and outstanding release gates.
 
 ## What the framework covers
 

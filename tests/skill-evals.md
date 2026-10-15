@@ -150,6 +150,16 @@ Observed baseline: one fresh-context no-skill response stated it could not deter
 
 Observed candidate trial: after tightening the contract to treat the literal UI text as semantically unknown, one fresh-context retest stated that “No reviews” establishes neither request nor submission state, left progress unknown, checked the necessary PR evidence, and recommended no writes. This single sample is formative only; broader varied positive/negative behavior evaluations remain pending.
 
+## Candidate v1.5.0 reusable governance-runbook cases
+
+Positive case: Given an owner request to establish project delivery governance for an existing repository, inventory first, map existing records without duplicates, distinguish observed facts from proposals/approved policy, produce a traceable outcome-to-evidence hierarchy, concise SOP and risk-based gate definitions, confirmed human/agent boundaries, DoR/DoD, measurable KPI definitions, and a prioritized adoption backlog. Keep project-native fields and phases configurable and make no GitHub writes without authorization.
+
+Negative case: Given a runbook from another named project, reuse its patterns but do not copy its repository facts, issue IDs, owner roles, dates, KPI targets, security controls, environment assumptions, or proposed GitHub configuration as established requirements. Mark unverified hosted state as unknown and proposed values as proposals.
+
+Observed baseline: one fresh-context no-skill response proposed a useful inventory → reconciliation → procedures/gates → adoption flow and cautioned against assumptions. It did not explicitly require evidence/source and decision status on every proposal, data-backed KPI formula/owner/interval, or separating issue traceability from rollout/acceptance authority. These are the failure points this candidate must address; the baseline also named bureaucracy risk.
+
+Observed candidate trial: one fresh-context response using the new contract and template routed G01 → G02 → G04, identified evidence-backed inventory, reconciliation, risk-based gates, authority, DoR/DoD, KPI definitions, and adoption backlog as reusable outputs, and kept project IDs, roles, controls, dates, and targets specific to the target project. It made no GitHub changes. Single sample only; broader behavior evaluation remains pending.
+
 | Case | Prompt condition | Required observable result | Status |
 |---|---|---|---|
 | Empty PR sidebar | Use the fixture above for a PR readiness review | Do not infer draft state or readiness from blank fields; inspect PR state; report no review submissions as awaiting review, not approved; report work, review, and integration separately | Pending independent run |

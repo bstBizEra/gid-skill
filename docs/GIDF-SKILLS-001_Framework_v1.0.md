@@ -173,7 +173,7 @@ verification, integration, runtime and business acceptance separately.
 
 ## Validation and remaining proof
 
-The v1.4.0 candidate passed **25 automated Python tests**; v1.4.1 passes **26**, including an assertion for explicit PR progress evidence. These are package checks, not a skill release gate. One independent synthetic fixture run exercised v1.2.0 branch planning and review acceptance; one live read-only trial checked v1.3.0 preservation of an existing repository description. A baseline response and one candidate-contract response were recorded for the v1.4.1 PR sidebar scenario; varied behavior cases remain pending. Native host discovery, live policy enforcement, and target-repository adoption are unverified.
+The v1.4.0 candidate passed **25 automated Python tests**, v1.4.1 passed **26**, and v1.5.0 passes **27**, including route/template coverage for project governance runbooks. These are package checks, not a skill release gate. One independent synthetic fixture run exercised v1.2.0 branch planning and review acceptance; one live read-only trial checked v1.3.0 preservation of an existing repository description. Baseline and one candidate response were recorded for the v1.4.1 PR sidebar scenario, and one baseline plus one candidate response were recorded for the v1.5.0 runbook scenario. These are formative single-sample trials; broader behavior cases remain pending. Native host discovery, live policy enforcement, and target-repository adoption are unverified.
 
 Fresh-agent applications covered a deadline-pressured release handoff and a mixed repository adoption inventory. The initial handoff was accurate but unnecessarily long; its output contract was revised and retested. A no-skill control already respected major safety and authority boundaries, so these applications do not establish a measured performance improvement over baseline.
 
@@ -192,8 +192,8 @@ Native Codex, Claude Code and Gemini CLI executables are unavailable in this env
 - [Actions secure use](https://docs.github.com/en/actions/reference/security/secure-use)
 - [SWE-PolyBench research paper](https://arxiv.org/abs/2504.08703)
 
-Feature/format facts come from primary documentation; group boundaries, templates, controls and roadmap are framework design recommendations. Candidate contents, evaluation limits and checksum are recorded in `dist/CANDIDATE-v1.4.1.md`.
+Feature/format facts come from primary documentation; group boundaries, templates, controls and roadmap are framework design recommendations. Candidate contents, evaluation limits and checksum are recorded in `dist/CANDIDATE-v1.5.0.md`.
 
 ## Source version and recovery
 
-The source package currently has a Git candidate checkout. The portable v1.4.1 candidate archive and SHA-256 are recorded in `dist/CANDIDATE-v1.4.1.md`; prior artifacts are retained in `dist/`. The release gate remains incomplete, and no hosted release or target-repository adoption is claimed. The installed runtime copy remains a separate artifact and must be updated through its authorized installation workflow.
+The source package currently has a Git candidate checkout. The portable v1.5.0 candidate archive and SHA-256 are recorded in `dist/CANDIDATE-v1.5.0.md`; prior artifacts are retained in `dist/`. The release gate remains incomplete, and no hosted release or target-repository adoption is claimed. The installed runtime copy remains a separate artifact and must be updated through its authorized installation workflow.

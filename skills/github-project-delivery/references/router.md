@@ -14,6 +14,7 @@
 |---|---|
 | Adopt or upgrade GIDF | G01 → G02 → G04 → G05; then only the authorized implementation subset |
 | Create or initialize a GitHub repository | G01 → G02; include a purpose-based About description and verify repository metadata |
+| Establish or upgrade a project governance / engineering delivery runbook | G01 → G02 → G04 → [runbook contract](contracts/project-governance-runbook.md) and [template](../templates/project-governance-runbook.md); add G03/G05/G07/G08/G09/G10/G12 only when the agreed scope requires them |
 | Product or feature | G03 → G04 → G05 → G06 → G07 → G09; add G01/G02 for current context, G08 for relevant risk, G10 if release is in scope |
 | Branch topology, parallel work, or supported release lines | G04 → [branch strategy](branch-strategy.md); add G06/G07/G09 only when implementation/review is in scope |
 | Defect | G02 → G06 → G07 → G09; add G08 for a security defect |

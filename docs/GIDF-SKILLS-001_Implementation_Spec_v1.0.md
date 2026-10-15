@@ -2,14 +2,14 @@
 
 - **Specification version:** 1.0.0
 - **Date:** 15 October 2026
-- **Status:** Implemented as local v1.4.1 candidate; release gates incomplete; host adoption unverified
+- **Status:** Implemented as local v1.5.0 candidate; release gates incomplete; host adoption unverified
 - **Parent:** [GIDF-SKILLS-001 Framework v1.0](GIDF-SKILLS-001_Framework_v1.0.md)
 
 ## 1. Purpose
 
 Convert the GIDF-SKILLS-001 framework into one portable, installable Agent Skill that routes GitHub project-delivery work through the framework's twelve workflow groups. Preserve existing project authority and use GitHub as the durable work/evidence record where the target project adopts it.
 
-This document records the package contract and its current local implementation. Candidate tests and archive checksum are recorded in `dist/CANDIDATE-v1.4.1.md`. Native host discovery, cross-host behavior, installation of v1.4.1, and adoption by a target repository remain unverified.
+This document records the package contract and its current local implementation. Candidate tests and archive checksum are recorded in `dist/CANDIDATE-v1.5.0.md`. Native host discovery, cross-host behavior, installation of v1.5.0, and adoption by a target repository remain unverified.
 
 ## 2. Goals and non-goals
 
