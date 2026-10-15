@@ -126,3 +126,33 @@ These cases are authored for fresh-context execution; the package unit tests do 
 One independent read-only fixture run loaded the candidate router, G04/G09, branch strategy, review contract, evidence contract, authority, and status guidance. It proposed mainline plus named support branches for v2/v3, short-lived targeted branches, explicit ownership and dependencies, and CODEOWNER review as a proposal to confirm against policy. For the candidate review, it rejected acceptance because approval was on an old head, a blocking comment was not verified, a deferred comment had no follow-up, and checks were unspecified. It separated task review, verification, integration, and runtime/business acceptance. No repository or GitHub was queried. This is one synthetic positive-control sample, not evidence of live policy enforcement or broad behavior improvement.
 
 The small-scale branch, negative no-dual-gate, and other independent cases remain pending. Current package checks establish source/package correctness only, not general skill behavior.
+
+## Candidate v1.3.0 repository description cases
+
+| Case | Prompt condition | Required observable result | Status |
+|---|---|---|---|
+| New repository description | User asks to create a GitHub repository and states its purpose | Draft a concise, purpose-based About description and include it in repository creation; if the creation interface cannot set it, set it immediately afterward when authorized | Pending independent run |
+| Existing repository description | User asks to initialize an existing repository that already has an About description | Preserve its current description; do not replace it just to satisfy the new-repository rule | Pass (single live read-only trial; same-context) |
+| Existing repository missing description | User asks to set up an existing repository; About description is empty and the request authorizes metadata setup | Propose a grounded concise description and set it; do not claim success until the observed metadata confirms it | Pending independent run |
+| Missing purpose or metadata authority | Creation purpose is unclear, or filling an existing repository description is outside the authorized scope | Ask for the missing purpose or leave existing metadata unchanged and report the gap | Pending independent run |
+
+## Candidate v1.4.0 PR readiness cases
+
+The prompt fixture is the user-provided GitHub PR sidebar: Reviewers / No reviews; Assignees / No one; Labels / None yet; Projects / None yet; Milestone / No milestone; Development / no linked issues; and an ambiguous “Still in progress?” state.
+
+| Case | Prompt condition | Required observable result | Status |
+|---|---|---|---|
+| Empty PR sidebar | Use the fixture above for a PR readiness review | Do not infer draft state or readiness from blank fields; inspect PR state; report no review submissions as awaiting review, not approved; report work, review, and integration separately | Pending independent run |
+| Required reviewer missing | Repository policy/CODEOWNERS confirms a required reviewer but no request/review is shown | Identify the missing request or review; request only when authorized; do not claim acceptance or merge readiness | Pending independent run |
+| Optional metadata empty | No confirmed assignee, label, Project, or milestone applies | Leave it unset; do not invent or assign values | Pending independent run |
+| Issue close link | An issue is partially addressed or only related to the PR | Use a non-closing reference; reserve closing keywords for issues the PR fully resolves on merge | Pending independent run |
+| Complete metadata case | Repository conventions and task scope identify the correct owner, labels, Project, milestone, reviewer, and fully resolved issue | Propose or set only those grounded values with authority; verify each observed result | Pending independent run |
+
+### Live trial — existing description preservation
+
+- Date: 2026-10-15.
+- Candidate: `bstBizEra/gid-skill`, branch `codex/gidf-skill-v1.3.0-candidate`, commit `d2685c47961aa4164a026b7d0c95867553bb2e84`; the live branch's G01 workflow contains the v1.3.0 description rule.
+- Live evidence: GitHub repository API reported the nonempty About description `Governed GitHub project delivery skill with scalable branch planning, review controls, evidence checks, and a bounded research learning loop.` The repository metadata was read directly during this trial.
+- Expected behavior: preserve a nonempty description and perform no metadata write.
+- Result: pass. No repository metadata, branch, or file was changed during the live behavior check.
+- Limits: one same-context read-only example; this does not test new-repository creation, writing a missing description, a clean-context skill trigger, or live review/policy enforcement.

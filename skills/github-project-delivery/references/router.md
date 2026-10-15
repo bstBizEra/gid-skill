@@ -13,10 +13,12 @@
 | Request | Route |
 |---|---|
 | Adopt or upgrade GIDF | G01 → G02 → G04 → G05; then only the authorized implementation subset |
+| Create or initialize a GitHub repository | G01 → G02; include a purpose-based About description and verify repository metadata |
 | Product or feature | G03 → G04 → G05 → G06 → G07 → G09; add G01/G02 for current context, G08 for relevant risk, G10 if release is in scope |
 | Branch topology, parallel work, or supported release lines | G04 → [branch strategy](branch-strategy.md); add G06/G07/G09 only when implementation/review is in scope |
 | Defect | G02 → G06 → G07 → G09; add G08 for a security defect |
 | Review comments, dual auditor/reviewer acceptance, or merge readiness | G07 → G09 → [review and acceptance contract](contracts/review-and-acceptance.md) |
+| Prepare or inspect PR sidebar metadata and readiness | G04 → G09 → [PR metadata and readiness contract](contracts/pull-request-readiness.md) |
 | Release or operations | G10 → G12; feed measured improvements into G03/G04 |
 | Documentation or decision | G02 → G11, with G03 if the decision changes product requirements |
 | Promote an accepted skill lesson or prepare a skill release | G11 → G10, following `skill-versioning-and-release.md` |

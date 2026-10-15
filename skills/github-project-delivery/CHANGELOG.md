@@ -1,5 +1,24 @@
 # Changelog
 
+## 1.4.0 — 2026-10-15 (candidate)
+
+Backward-compatible PR metadata and readiness guidance.
+
+- Added a G04/G09 contract for reviewer requests and submissions, draft/work/review/integration states, assignees, labels, Projects, milestones, and issue-closing links.
+- Clarified that no reviews means awaiting review, not approved; a ready-for-review PR can still await review, while draft work remains in progress.
+- Require repository conventions and authority for metadata changes; preserve unknown or optional fields instead of inventing values.
+- Added package contract coverage and user-provided sidebar evaluation cases.
+- Release status: candidate only; behavior evaluations remain incomplete.
+
+## 1.3.0 — 2026-10-15 (candidate)
+
+Backward-compatible repository-setup guidance.
+
+- For every GitHub repository creation, derive a concise About description from the requested purpose and include it during creation; if the available creation path cannot set it, set it afterward when authorized.
+- For existing repositories, preserve nonempty descriptions and add a description only when it is missing and the requested, authorized setup scope permits the metadata write.
+- Added a repository-creation route and positive/negative behavior evaluation cases.
+- Release status: candidate only; fresh-context evaluation and release gates remain incomplete.
+
 ## 1.2.0 — 2026-10-15
 
 Backward-compatible branch planning and review-acceptance controls, plus installer race safety.

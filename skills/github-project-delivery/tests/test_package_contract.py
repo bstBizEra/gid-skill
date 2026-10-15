@@ -32,6 +32,21 @@ class PackageContractTests(unittest.TestCase):
                     broken.append(f"{markdown.relative_to(ROOT)} -> {target}")
         self.assertEqual(broken, [])
 
+    def test_repository_setup_route_includes_description_governance(self):
+        registry = json.loads((ROOT / "registry.json").read_text(encoding="utf-8"))
+        self.assertEqual(registry["conditional_routes"]["repository_setup"], ["G01", "G02"])
+        governance = (ROOT / "references/workflows/G01-governance.md").read_text(encoding="utf-8")
+        self.assertIn("concise About description", governance)
+        self.assertIn("preserve a nonempty description", governance)
+
+    def test_pr_readiness_contract_is_registered_and_separates_statuses(self):
+        registry = json.loads((ROOT / "registry.json").read_text(encoding="utf-8"))
+        self.assertIn("references/contracts/pull-request-readiness.md", registry["contracts"])
+        self.assertEqual(registry["conditional_routes"]["pull_request_readiness"], ["G04", "G09"])
+        contract = (ROOT / "references/contracts/pull-request-readiness.md").read_text(encoding="utf-8")
+        for expected in ("awaiting_review", "Assignees", "Labels", "Projects", "Milestone", "Development"):
+            self.assertIn(expected, contract)
+
 
 if __name__ == "__main__":
     unittest.main()

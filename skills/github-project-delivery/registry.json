@@ -1,9 +1,9 @@
 {
   "name": "github-project-delivery",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "entry": "SKILL.md",
   "router": "references/router.md",
-  "contracts": ["references/contracts/authority-and-scope.md", "references/contracts/evidence-and-attempts.md", "references/contracts/review-and-acceptance.md", "references/contracts/status-fields.md", "references/research-learning-loop.md", "references/skill-versioning-and-release.md"],
+  "contracts": ["references/contracts/authority-and-scope.md", "references/contracts/evidence-and-attempts.md", "references/contracts/review-and-acceptance.md", "references/contracts/pull-request-readiness.md", "references/contracts/status-fields.md", "references/research-learning-loop.md", "references/skill-versioning-and-release.md"],
   "references": ["references/branch-strategy.md"],
   "workflows": [
     {"id": "G01", "name": "governance", "path": "references/workflows/G01-governance.md"},
@@ -22,5 +22,5 @@
   "providers": ["references/providers/codex.md", "references/providers/claude-code.md", "references/providers/gemini-cli.md"],
   "templates": ["templates/task.md", "templates/evidence.md", "templates/handoff.md", "templates/release.md"],
   "tools": ["scripts/check_evidence.py", "scripts/install_skill.py"],
-  "conditional_routes": {"feature": ["G03", "G04", "G05", "G06", "G07", "G09"], "branch_strategy": ["G04"], "review_acceptance": ["G07", "G09"], "defect": ["G02", "G06", "G07", "G09"], "release_operations": ["G10", "G12"], "resume_or_provider_switch": ["G05"]}
+  "conditional_routes": {"feature": ["G03", "G04", "G05", "G06", "G07", "G09"], "branch_strategy": ["G04"], "review_acceptance": ["G07", "G09"], "pull_request_readiness": ["G04", "G09"], "repository_setup": ["G01", "G02"], "defect": ["G02", "G06", "G07", "G09"], "release_operations": ["G10", "G12"], "resume_or_provider_switch": ["G05"]}
 }

@@ -2,20 +2,22 @@
 
 - **Specification version:** 1.0.0
 - **Date:** 15 October 2026
-- **Status:** Implemented as local v1.2.0 candidate; release gates incomplete; host adoption unverified
+- **Status:** Implemented as local v1.4.0 candidate; release gates incomplete; host adoption unverified
 - **Parent:** [GIDF-SKILLS-001 Framework v1.0](GIDF-SKILLS-001_Framework_v1.0.md)
 
 ## 1. Purpose
 
 Convert the GIDF-SKILLS-001 framework into one portable, installable Agent Skill that routes GitHub project-delivery work through the framework's twelve workflow groups. Preserve existing project authority and use GitHub as the durable work/evidence record where the target project adopts it.
 
-This document records the package contract and its current local implementation. Candidate tests and archive checksum are recorded in `dist/CANDIDATE-v1.2.0.md`. Native host discovery, cross-host behavior, installation of v1.2.0, and adoption by a target repository remain unverified.
+This document records the package contract and its current local implementation. Candidate tests and archive checksum are recorded in `dist/CANDIDATE-v1.4.0.md`. Native host discovery, cross-host behavior, installation of v1.4.0, and adoption by a target repository remain unverified.
 
 ## 2. Goals and non-goals
 
 ### Goals
 
 - Provide one discoverable entry skill that selects the smallest applicable G01–G12 workflow.
+- Include a concise, purpose-based About description whenever an authorized request creates a GitHub repository; preserve existing nonempty descriptions.
+- Distinguish PR work, review, and integration states and inspect reviewer requests, assignees, labels, Projects, milestones, and issue-closing links without inventing metadata.
 - Preserve the framework's authority, evidence, attempt-history, integration, release, and acceptance boundaries.
 - Load detailed workflow material only when the selected route needs it.
 - Work across compatible skill hosts; keep provider-specific tool names and paths out of shared contracts.
@@ -26,7 +28,7 @@ This document records the package contract and its current local implementation.
 
 - Replace an existing GIDF/ADF, repository, security, or release policy.
 - Install or configure GitHub Apps, connectors, permissions, branch rules, Project fields, Actions, or environments.
-- Automatically create Issues/PRs, change repository settings, merge, publish, deploy, or write to production.
+- Automatically create repositories, Issues/PRs, change repository settings, merge, publish, deploy, or write to production. Repository creation and metadata writes still require explicit scope and authority.
 - Create twelve separately installed skills, a general-purpose autonomous agent platform, or a global self-modifying memory system.
 - Claim that tool access, account permission, live GitHub state, or cross-host compatibility exists without observing it.
 
